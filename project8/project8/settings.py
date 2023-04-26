@@ -15,12 +15,15 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
+#TEMPLATE_DIR='C:\\Users\\jayac\\OneDrive\\Desktop\\74de6\\rolex\\Scripts\\project8\\templates'
+#TEMPLATE_DIR=BASE_DIR/'templates'
+import os
+TEMPLATE_DIR=os.path.join(BASE_DIR,'templates')
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-m1s%s$j+^!rwbqdt@ao$w-*@ow0_g*szxwyl!zzg7d=f)$7w-8'
+SECRET_KEY = 'django-insecure-_)1zmv85=cek*(wz#b@gmwe!tcnhi_f^gw2p$-)ihjvf#6kj^+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,8 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app1',
-    'app2',
+    'app',
 ]
 
 MIDDLEWARE = [
@@ -56,7 +58,7 @@ ROOT_URLCONF = 'project8.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [TEMPLATE_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+    <title>parent html</title>
+    {% endblock %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mdb.css' %}">
+</head>
+<body>
+    {% block body_block %}
+    <center>
+        <h1 class="btn btn-secondary">parent html page</h1>
+    </center>
+    {% endblock %}
+
+    <script src="{% static 'css/bootstrap.js' %}"></script>
+    <script src="{% static 'css/mdb.js' %}"></script>
+    <script src="{% static 'css/jquery.js' %}"></script>
+    <script src="{% static 'css/popper.js' %}"></script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/c2.css' %}">
+</head>
+<body>
+    <center>
+        <h1>display_emp</h1>
+        <table border="3px">
+            <tr id="main">
+                <th>Empno</th>
+                <th>Ename</th>
+                <th>Job</th>
+                <th>Mgr</th>
+                <th>Hiredate</th>
+                <th>Sal</th>
+                <th>Comm</th>
+                <th>Deptno</th>
+            </tr>
+            {% for i in emp %}
+            <tr>
+                <td class="a">{{i.Empno}}</td>
+                <td class="b">{{i.Ename}}</td>
+                <td class="c">{{i.Job}}</td>
+                <td class="d">{{i.Mgr}}</td>
+                <td class="mohana">{{i.Hiredate}}</td>
+                <td class="jaya">{{i.Sal}}</td>
+                <td class="sruthi">{{i.Comm}}</td>
+                <td class="buna">{{i.Deptno.Deptno}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </center>
+</body>
+</html>
